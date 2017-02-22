@@ -26,8 +26,15 @@
 </head>
 <body>
 
-<!--navigation bar top-->
-<nav class="navbar navbar-default container-fluid navbar-fixed-top nav-height aafno-nav-bar-color no-border"
+
+<div class="container-fluid margin-nav-height-ko-size full-page-container">
+    <div class="container  full-page-container grey-color-background">
+    <!--navigation bar top-->
+
+        <div class="row  full-page-container">
+            <div class="col-md-3 black-color-background full-page-container">
+
+                <nav style="width:100%" class="navbar navbar-default container nav-height aafno-nav-bar-color no-border"
      id="mainNav">
 
     <div class="container ">
@@ -46,13 +53,8 @@
         <!--responsive menus-->
 
         <div class="collapse navbar-collapse " id="main-nav">
-            <form class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">Search</button>
-            </form>
-            <ul class="nav navbar-nav navbar-right ">
+
+            <ul class="nav navbar-nav ">
 
                 <li><a href="#"><span class="glyphicon glyphicon-envelope color-white" aria-hidden="true"></span></a>
                 </li>
@@ -76,19 +78,15 @@
         </div><!-- /.navbar-collapse -->
     </div><!--container-->
 </nav>
-<div class="container-fluid margin-nav-height-ko-size full-page-container">
-    <div class="container  full-page-container">
-        <div class="row black-color-background full-page">
-            <div class="col-md-3">
                  <div class="row">
-                    <div class="com-md-12 padding-zero padding-top-left-nav">
+                    <div class="com-md-3 padding-zero padding-top-left-nav">
                         {% load static %}
                         <center><img src="{% static 'featured1.jpg' %}" alt="..." class="img-circle profile"></center>
 
                     </div>
                 </div>
                 <div class="row">
-                    <div class="com-md-12 padding-zero padding-top-left-nav">
+                    <div class="com-md-3 padding-zero padding-top-left-nav" >
                         <h3 class="padding-left">Tools</h3>
                         <ul class="nav nav-pills nav-stacked">
                             <li role="presentation"><a href="{% url 'dashboard' %}"><span

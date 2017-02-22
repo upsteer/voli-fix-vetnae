@@ -5,13 +5,15 @@ html, body {
 .black-color-background {
     background-color: #3c3c3c;
 }
+.grey-color-background{
+        background-color: #f5f5f5;
 
+}
 .nav-height {
     height: 50px;
 }
 
 .margin-nav-height-ko-size {
-    margin-top: 50px;
 }
 
 .padding-zero {
@@ -23,9 +25,13 @@ html, body {
 }
 
 .nav.nav-pills.nav-stacked li a {
-    color: #727272;
+    color: #ffffff;
 }
+.nav.nav-pills.nav-stacked li a:hover{
+    color: #000000;
+        background-color: #ffffff;
 
+}
 .aafno-nav-bar-color {
     background-color: #0277bd;
 }
