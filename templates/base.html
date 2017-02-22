@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>GRID | A complete network solution</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Chewy|Raleway">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!--navigation bar top-->
+<nav class="navbar navbar-default container-fluid navbar-fixed-top nav-height aafno-nav-bar-color no-border"
+     id="mainNav">
+
+    <div class="container ">
+
+        <!--brand logo-->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav"
+                    aria-expanded="false">
+                <span class="glyphicon glyphicon-menu-hamburger nav-bar-ko-text" aria-hidden="true"></span>
+            </button>
+            <a class="navbar-brand  " href="{% url 'index' %}"><span
+                    class="color-white"><Strong>GRID</Strong></span></a>
+        </div>
+
+
+        <!--responsive menus-->
+
+        <div class="collapse navbar-collapse " id="main-nav">
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Search</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right ">
+
+                <li><a href="#"><span class="glyphicon glyphicon-envelope color-white" aria-hidden="true"></span></a>
+                </li>
+
+                <li><a href="#"><span class="glyphicon glyphicon-bell color-white" aria-hidden="true"></span></a></li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">
+                        <span class="glyphicon glyphicon-user color-white" aria-hidden="true"></span>
+                        <span class="caret color-white"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!--container-->
+</nav>
+<div class="container-fluid margin-nav-height-ko-size full-page-container">
+    <div class="container grey-color-background full-page-container">
+        <div class="row">
+            <div class="col-md-3">
+                 <div class="row">
+                    <div class="com-md-12 padding-zero padding-top-left-nav">
+                        
+                        <img src="{% static  %}" alt="..." class="img-circle">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="com-md-12 padding-zero padding-top-left-nav">
+                        <h3 class="padding-left">Tools</h3>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li role="presentation"><a href="{% url 'dashboard' %}"><span
+                                    class="glyphicon glyphicon-th-large padding-right"
+                                    aria-hidden="true"></span>Dashboard</a></li>
+                            <li role="presentation"><a href="{% url 'files' %}"><span
+                                    class="glyphicon glyphicon-folder-open padding-right"
+                                    aria-hidden="true"></span>File Sharing</a></li>
+                            <li role="presentation"><a href="{% url 'video_calling' %}"><span
+                                    class="glyphicon glyphicon-phone-alt padding-right"
+                                    aria-hidden="true"></span>Video Calling</a></li>
+                            <li role="presentation"><a href="{% url 'chat' %}"><span
+                                    class="glyphicon glyphicon-bullhorn padding-right"
+                                    aria-hidden="true"></span>Chat</a></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+            </div><!--end of left nav-->
+            <div class="col-md-9 white-background-color">
+                {% block body %}
+                {% endblock %}
+            </div><!--end of right main body-->
+        </div><!--end of row in body container-->
+    </div><!--end of div-container for body-->
+</div><!--div container-fluid for body end-->
+
+<script src={% static 'lib/adapter.js' %} #}></script>
+
+<script src={% static 'main.js' %} #}></script>
+
+
+</body>
+</html>

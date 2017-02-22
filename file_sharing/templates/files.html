@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="page-header">
+        <h1><span class="glyphicon glyphicon-folder-open padding-right"
+                  aria-hidden="true"></span> File Sharing
+            <small>Power to share</small>
+        </h1>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+        </div>
+        <div class="panel-body">
+            {% for file in filelist %}
+                {{ file }}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
